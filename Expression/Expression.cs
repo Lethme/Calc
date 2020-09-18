@@ -280,7 +280,7 @@ namespace Expression
                     {
                         case (char)Enums.ConstantOperators.Pi: { Numbers.Push(Math.PI); break; }
                         case (char)Enums.ConstantOperators.E: { Numbers.Push(Math.E); break; }
-                        case (char)Enums.ConstantOperators.Ans: { Numbers.Push(Ans); break; }
+                        case (char)Enums.ConstantOperators.Ans: { if (Double.IsNaN(Ans) || Double.IsInfinity(Ans)) throw new ArgumentException(); Numbers.Push(Ans); break; }
                     }
                 }
                 else if (Service.IsUnaryOperator(RPNExpression[i]))
@@ -328,7 +328,7 @@ namespace Expression
                     Numbers.Push(result);
                 }
             }
-            if (Double.IsNaN(Numbers.Peek())) throw new ArgumentOutOfRangeException("Expression result is NaN!");
+            if (Double.IsNaN(Numbers.Peek()) || Double.IsInfinity(Numbers.Peek())) throw new ArgumentOutOfRangeException("Expression result is NaN!");
             return Numbers.Pop();
         }
         static public double Parse(string Expression)
