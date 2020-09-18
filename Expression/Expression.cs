@@ -10,23 +10,23 @@ namespace Expression
     {
         static public class Samples
         {
-            static private bool _show_expected_rpn = false;
-            static private bool _show_expected_result = true;
-            static private bool _show_actual_rpn = false;
+            static public bool exprpn { get; private set; } = false;
+            static public bool expres { get; private set; } = true;
+            static public bool actrpn { get; private set; } = false;
             static public bool SwitchExpectedRPN(bool state)
             {
-                _show_expected_rpn = state;
-                return _show_expected_rpn;
+                exprpn = state;
+                return exprpn;
             }
             static public bool SwitchExpectedResult(bool state)
             {
-                _show_expected_result = state;
-                return _show_expected_result;
+                expres = state;
+                return expres;
             }
             static public bool SwitchActualRPN(bool state)
             {
-                _show_actual_rpn = state;
-                return _show_actual_rpn;
+                actrpn = state;
+                return actrpn;
             }
             private struct Sample
             {
@@ -42,19 +42,19 @@ namespace Expression
             }
             static private Sample[] _samples = new Sample[]
             {
-                        new Sample("(16^(1/4))^(5/(64/(2^7)))", "16 1 4 / ^ 5 64 2 7 ^ / / ^", 1024),
-                        new Sample("((3*15)-(7+7*4))/(1,25*8^(1/3))", "3 15 * 7 7 4 * + - 1,25 8 1 3 / ^ * /", 4),
-                        new Sample("5*(-3)", "5 3 $ *", -15),
-                        new Sample("-10*7", "10 $ 7 *", -70),
-                        new Sample("2^(-1)", "2 1 $ ^", 0.5),
-                        new Sample("-5*(5^2/11*(-3)-1)^2", "5 $ 5 2 ^ 11 / 3 $ * 1 - 2 ^ *", -305.6198347),
-                        new Sample("sqrt(40-(-9))+(-2/5*(-(-5))+423,233^2/15^3,33333)", "40 9 $ - # 11 22 3 / ^ 22,222 / 44,3321 $ - 6 1 3 / ^ + +", 26.520817722),
-                        new Sample("sqrt(40-(-9)) + (11^(22/3)/22,222)-(-44,3321)+6^(1/3)", "", 1950331.26665),
-                        new Sample("sqrt(sqr(23,33))-4/sqr(sqrt(sqr((-16)/(-4))))", "", 23.08),
-                        new Sample("sqrt(85^2/(21^(-3))-11*11/(-55-(-55+33*123/443)))", "85 2 ^ 21 3 $ ^ / 11 11 * 55 $ 55 $ 33 123 * 443 / + - / - #", 8179.89842272),
-                        new Sample("sqr(sin(-0,5)) + sqr(cos(-0,5))", "0,5 $ S & 0,5 $ C & +", 1),
-                        new Sample("sin(-0,5)^2 + cos(-0,5)^2", "0,5 $ S 2 ^ 0,5 $ C 2 ^ +", 1),
-                        new Sample("1/sin(cos(sqrt(1-(-2,34))*(1,3+5,85^2)-2,71^(15/0,9455))/3,76534)", "1 1 2,34 $ - # 1,3 5,85 2 ^ + * 2,71 15 0,9455 / ^ - C 3,76534 / S /", 3.8099727)
+                new Sample("(16^(1/4))^(5/(64/(2^7)))", "16 1 4 / ^ 5 64 2 7 ^ / / ^", 1024),
+                new Sample("((3*15)-(7+7*4))/(1,25*8^(1/3))", "3 15 * 7 7 4 * + - 1,25 8 1 3 / ^ * /", 4),
+                new Sample("5*(-3)", "5 3 $ *", -15),
+                new Sample("-10*7", "10 $ 7 *", -70),
+                new Sample("2^(-1)", "2 1 $ ^", 0.5),
+                new Sample("-5*(5^2/11*(-3)-1)^2", "5 $ 5 2 ^ 11 / 3 $ * 1 - 2 ^ *", -305.6198347),
+                new Sample("sqrt(40-(-9))+(-2/5*(-(-5))+423,233^2/15^3,33333)", "40 9 $ - # 11 22 3 / ^ 22,222 / 44,3321 $ - 6 1 3 / ^ + +", 26.520817722),
+                new Sample("sqrt(40-(-9)) + (11^(22/3)/22,222)-(-44,3321)+6^(1/3)", "", 1950331.26665),
+                new Sample("sqrt(sqr(23,33))-4/sqr(sqrt(sqr((-16)/(-4))))", "", 23.08),
+                new Sample("sqrt(85^2/(21^(-3))-11*11/(-55-(-55+33*123/443)))", "85 2 ^ 21 3 $ ^ / 11 11 * 55 $ 55 $ 33 123 * 443 / + - / - #", 8179.89842272),
+                new Sample("sqr(sin(-0,5)) + sqr(cos(-0,5))", "0,5 $ S & 0,5 $ C & +", 1),
+                new Sample("sin(-0,5)^2 + cos(-0,5)^2", "0,5 $ S 2 ^ 0,5 $ C 2 ^ +", 1),
+                new Sample("1/sin(cos(sqrt(1-(-2,34))*(1,3+5,85^2)-2,71^(15/0,9455))/3,76534)", "1 1 2,34 $ - # 1,3 5,85 2 ^ + * 2,71 15 0,9455 / ^ - C 3,76534 / S /", 3.8099727)
             };
             static public void ImplementSamples()
             {
@@ -64,11 +64,14 @@ namespace Expression
                     try
                     {
                         Console.WriteLine("[Calc]" + "Current expression: ".PadLeft(spaces_from_left) + item.Expression);
-                        if (_show_expected_rpn) Console.WriteLine("[Calc]" + "Expected RPN expression: ".PadLeft(spaces_from_left) + item.ExpectedRPN);
-                        if (_show_expected_result) Console.WriteLine("[Calc]" + "Expected expression result: ".PadLeft(spaces_from_left) + item.ExpectedResult);
+                        if (exprpn) Console.WriteLine("[Calc]" + "Expected RPN expression: ".PadLeft(spaces_from_left) + item.ExpectedRPN);
+                        if (actrpn)
+                        {
+                            string resultRPN = GetRPNExpression(item.Expression);
+                            Console.WriteLine("[Calc]" + "Actual RPN expression: ".PadLeft(spaces_from_left) + resultRPN);
+                        }
+                        if (expres) Console.WriteLine("[Calc]" + "Expected expression result: ".PadLeft(spaces_from_left) + item.ExpectedResult);
                         double result = Parse(item.Expression);
-                        string resultRPN = GetRPNExpression(item.Expression);
-                        if (_show_actual_rpn) Console.WriteLine("[Calc]" + "Actual RPN expression: ".PadLeft(spaces_from_left) + resultRPN);
                         Console.WriteLine("[Calc]" + "Actual expression result: ".PadLeft(spaces_from_left) + result);
                         Console.WriteLine();
                     }

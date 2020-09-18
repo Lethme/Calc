@@ -200,7 +200,7 @@ namespace Interface
                                     if (param[1] != "true" && param[1] != "false") break;
                                     switch (param[0])
                                     {
-                                        case "--exprpn":
+                                        case "%" + nameof(Expression.Expression.Samples.exprpn) + "%":
                                             {
                                                 if (Expression.Expression.Samples.SwitchExpectedRPN(Boolean.Parse(param[1])))
                                                     Console.WriteLine("[Calc] Expected RPN expressions will be shown in samples implementation.\n");
@@ -208,7 +208,7 @@ namespace Interface
                                                     Console.WriteLine("[Calc] Expected RPN expressions will be hidden in samples implementation.\n");
                                                 break;
                                             }
-                                        case "--expres":
+                                        case "%" + nameof(Expression.Expression.Samples.expres) + "%":
                                             {
                                                 if (Expression.Expression.Samples.SwitchExpectedResult(Boolean.Parse(param[1])))
                                                     Console.WriteLine("[Calc] Expected expression results will be shown in samples implementation.\n");
@@ -216,7 +216,7 @@ namespace Interface
                                                     Console.WriteLine("[Calc] Expected expression results will be hidden in samples implementation.\n");
                                                 break;
                                             }
-                                        case "--actrpn":
+                                        case "%" + nameof(Expression.Expression.Samples.actrpn) + "%":
                                             {
                                                 if (Expression.Expression.Samples.SwitchActualRPN(Boolean.Parse(param[1])))
                                                     Console.WriteLine("[Calc] Actual RPN expressions will be shown in samples implementation.\n");
@@ -234,6 +234,34 @@ namespace Interface
                                 {
                                     Expression.Expression.Samples.ImplementSamples();
                                     break;
+                                }
+
+                                switch (param[0])
+                                {
+                                    case "-t": Expression.Expression.Samples.ImplementSamples(); return;
+                                    case "%":
+                                        {
+                                            Console.WriteLine($"[Calc] Expected RPN expressions display: {nameof(Expression.Expression.Samples.exprpn)} = {Expression.Expression.Samples.exprpn}");
+                                            Console.WriteLine($"[Calc] Expected expression results display: {nameof(Expression.Expression.Samples.expres)} = {Expression.Expression.Samples.expres}");
+                                            Console.WriteLine($"[Calc] Actual RPN expressions display: {nameof(Expression.Expression.Samples.actrpn)} = {Expression.Expression.Samples.actrpn}");
+                                            Console.WriteLine();
+                                            return;
+                                        }
+                                    case "%" + nameof(Expression.Expression.Samples.exprpn) + "%":
+                                        {
+                                            Console.WriteLine($"[Calc] Expected RPN expressions display: {Expression.Expression.Samples.exprpn}\n");
+                                            return;
+                                        }
+                                    case "%" + nameof(Expression.Expression.Samples.expres) + "%":
+                                        {
+                                            Console.WriteLine($"[Calc] Expected expression results display: {Expression.Expression.Samples.expres}\n");
+                                            return;
+                                        }
+                                    case "%" + nameof(Expression.Expression.Samples.actrpn) + "%":
+                                        {
+                                            Console.WriteLine($"[Calc] Actual RPN expressions display: {Expression.Expression.Samples.actrpn}\n");
+                                            return;
+                                        }
                                 }
 
                                 try
