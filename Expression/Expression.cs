@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Collections;
 
 namespace Expression
@@ -186,15 +183,15 @@ namespace Expression
                 }
                 if (Char.IsLetter(Expression[i]))
                 {
-                    string function = String.Empty;
+                    string Function = String.Empty;
                     while (Char.IsLetter(Expression[i]) || Char.IsDigit(Expression[i]))
                     {
-                        function += Expression[i];
+                        Function += Expression[i];
                         if (i + 1 == Expression.Length) break;
                         i++;
                     }
 
-                    switch (function.ToLower())
+                    switch (Function.ToLower())
                     {
                         case "sqrt": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.SquareRoot); break; }
                         case "sqr": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.Square); break; }
@@ -211,7 +208,7 @@ namespace Expression
                         case "pi": { OperatorStack.Push((char)Enums.ConstantOperators.Pi); break; }
                         case "e": { OperatorStack.Push((char)Enums.ConstantOperators.E); break; }
                         case "ans": { OperatorStack.Push((char)Enums.ConstantOperators.Ans); break; }
-                        default: { throw new ArgumentException(); }
+                        default: { throw new ArgumentException($"{Function} is not a function!"); }
                     }
                 }
                 if (Service.IsBinaryOperator(Expression[i]))
@@ -260,35 +257,35 @@ namespace Expression
         static public double EvaluateRPN(string RPNExpression)
         {
             double result = 0;
-            Stack<double> numbers = new Stack<double>();
+            Stack<double> Numbers = new Stack<double>();
 
             for (int i = 0; i < RPNExpression.Length; i++)
             {
                 if (Char.IsDigit(RPNExpression[i]))
                 {
-                    string number = string.Empty;
+                    string Number = string.Empty;
 
                     while (!Service.IsDelimeter(RPNExpression[i]) && !Service.IsBinaryOperator(RPNExpression[i]))
                     {
-                        number += RPNExpression[i];
+                        Number += RPNExpression[i];
                         i++;
                         if (i == RPNExpression.Length) break;
                     }
-                    numbers.Push(double.Parse(number));
+                    Numbers.Push(double.Parse(Number));
                     i--;
                 }
                 else if (Service.IsConstantOperator(RPNExpression[i]))
                 {
                     switch (RPNExpression[i])
                     {
-                        case (char)Enums.ConstantOperators.Pi: { numbers.Push(Math.PI); break; }
-                        case (char)Enums.ConstantOperators.E: { numbers.Push(Math.E); break; }
-                        case (char)Enums.ConstantOperators.Ans: { numbers.Push(Ans); break; }
+                        case (char)Enums.ConstantOperators.Pi: { Numbers.Push(Math.PI); break; }
+                        case (char)Enums.ConstantOperators.E: { Numbers.Push(Math.E); break; }
+                        case (char)Enums.ConstantOperators.Ans: { Numbers.Push(Ans); break; }
                     }
                 }
                 else if (Service.IsUnaryOperator(RPNExpression[i]))
                 {
-                    double Operand = numbers.Pop();
+                    double Operand = Numbers.Pop();
 
                     switch (RPNExpression[i])
                     {
@@ -307,12 +304,12 @@ namespace Expression
                         case (char)Enums.UnaryOperators.Abs: { result = Math.Abs(Operand); break; }
                     }
                     if (Double.IsNaN(result)) throw new ArgumentException();
-                    numbers.Push(result);
+                    Numbers.Push(result);
                 }
                 else if (Service.IsBinaryOperator(RPNExpression[i]))
                 {
-                    double RightOperand = numbers.Pop();
-                    double LeftOperand = numbers.Pop();
+                    double RightOperand = Numbers.Pop();
+                    double LeftOperand = Numbers.Pop();
 
                     switch (RPNExpression[i])
                     {
@@ -328,11 +325,11 @@ namespace Expression
                         case (char)Enums.BinaryOperators.Pow: result = Math.Pow(LeftOperand, RightOperand); break;
                     }
                     if (Double.IsNaN(result)) throw new ArgumentException();
-                    numbers.Push(result);
+                    Numbers.Push(result);
                 }
             }
-            if (Double.IsNaN(numbers.Peek())) throw new ArgumentOutOfRangeException("Expression result is NaN!");
-            return numbers.Pop();
+            if (Double.IsNaN(Numbers.Peek())) throw new ArgumentOutOfRangeException("Expression result is NaN!");
+            return Numbers.Pop();
         }
         static public double Parse(string Expression)
         {

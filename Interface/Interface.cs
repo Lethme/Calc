@@ -1,11 +1,6 @@
-﻿using Expression;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Text.RegularExpressions;
-using System.Globalization;
+using Expression;
 
 namespace Interface
 {
@@ -88,6 +83,16 @@ namespace Interface
             static public string CommandBase { get { return command_base; } }
             static public string[] Param { get { return param; } }
             static public int ParamCount { get { return param_count; } }
+            static public class UnitReferences
+            {
+                static public class Calc
+                {
+                    static public void FAQ()
+                    {
+                        Console.WriteLine("FAQ's being developed.\n");
+                    }
+                }
+            }
             static public void Ref()
             {
                 Console.WriteLine("Use 'help' to see all the available commands in current shell!");
@@ -230,14 +235,9 @@ namespace Interface
                             }
                             else if (param_count == 1)
                             {
-                                if (param[0] == "-t")
-                                {
-                                    Expression.Expression.Samples.ImplementSamples();
-                                    break;
-                                }
-
                                 switch (param[0])
                                 {
+                                    case "-?": Shell.UnitReferences.Calc.FAQ(); return;
                                     case "-t": Expression.Expression.Samples.ImplementSamples(); return;
                                     case "%":
                                         {

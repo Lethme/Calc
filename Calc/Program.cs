@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Interface;
+
+using static Interface.Interface;
 
 namespace Calc
 {
@@ -11,12 +12,12 @@ namespace Calc
     {
         static void Main(string[] args)
         {
-            Interface.Interface.Shell.Ref();
+            Shell.Ref();
             while (true)
             {
                 Console.Title = "Console";
-                Interface.Interface.Shell.Enter();
-                Interface.Interface.Shell.Execute();
+                Shell.Enter();
+                Shell.Execute();
             }
         }
     }
