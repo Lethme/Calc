@@ -6,3 +6,16 @@ X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csprojAssemb
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csproj.CopyComplete
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.dll
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csproj.CopyComplete
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\bin\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\bin\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\bin\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\bin\Collections.pdb

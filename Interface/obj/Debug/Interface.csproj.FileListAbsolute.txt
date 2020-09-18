@@ -8,3 +8,14 @@ X:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csprojAssemblyRe
 X:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CopyComplete
 X:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.dll
 X:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.pdb
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Interface.dll
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Interface.pdb
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CopyComplete
+E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.dll
+E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.pdb

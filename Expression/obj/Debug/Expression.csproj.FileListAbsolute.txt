@@ -6,3 +6,12 @@ X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csprojAssembly
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CopyComplete
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.dll
 X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CopyComplete
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.pdb

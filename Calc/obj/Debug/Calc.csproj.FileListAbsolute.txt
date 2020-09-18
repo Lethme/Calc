@@ -11,3 +11,17 @@ X:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csprojAssemblyReference.ca
 X:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CopyComplete
 X:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.exe
 X:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.pdb
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Calc.exe.config
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Calc.exe
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Calc.pdb
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Interface.dll
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Expression.dll
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Interface.pdb
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Expression.pdb
+E:\Projects\Visual Studio\C#\Calc\Calc\bin\Debug\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CopyComplete
+E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.exe
+E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.pdb

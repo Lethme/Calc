@@ -3,3 +3,9 @@ X:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\Collections.pdb
 X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
 X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.dll
 X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\bin\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\bin\Collections.pdb
+E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.dll
+E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.pdb

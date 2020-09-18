@@ -12,10 +12,11 @@ namespace Calc
     {
         static void Main(string[] args)
         {
+            Console.Title = "Calc";
+
             Shell.Ref();
             while (true)
             {
-                Console.Title = "Console";
                 Shell.Enter();
                 Shell.Execute();
             }
