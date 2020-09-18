@@ -165,7 +165,7 @@ namespace Interface
                                 }
                                 catch (Exception)
                                 {
-                                    Console.WriteLine("[Calc] Invalid expression!");
+                                    Console.WriteLine("[Calc] Invalid expression!\n");
                                 }
                             }
                             else if (param_count == 0)
