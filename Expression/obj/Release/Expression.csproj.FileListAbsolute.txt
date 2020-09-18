@@ -1,0 +1,8 @@
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Release\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csprojAssemblyReference.cache
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.csproj.CopyComplete
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Release\Expression.pdb

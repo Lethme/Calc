@@ -1,0 +1,13 @@
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Calc.exe.config
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Calc.exe
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Calc.pdb
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Interface.dll
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Interface.pdb
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Calc\bin\Release\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Calc\obj\Release\Calc.csprojAssemblyReference.cache
+X:\Projects\Visual Studio\C#\Calc\Calc\obj\Release\Calc.csproj.CopyComplete
+X:\Projects\Visual Studio\C#\Calc\Calc\obj\Release\Calc.exe
+X:\Projects\Visual Studio\C#\Calc\Calc\obj\Release\Calc.pdb

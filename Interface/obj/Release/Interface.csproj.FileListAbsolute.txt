@@ -1,0 +1,10 @@
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Interface.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Interface.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Release\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\obj\Release\Interface.csprojAssemblyReference.cache
+X:\Projects\Visual Studio\C#\Calc\Interface\obj\Release\Interface.csproj.CopyComplete
+X:\Projects\Visual Studio\C#\Calc\Interface\obj\Release\Interface.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\obj\Release\Interface.pdb
