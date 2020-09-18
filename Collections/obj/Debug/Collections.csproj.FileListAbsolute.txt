@@ -1,0 +1,5 @@
+X:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
+X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.pdb

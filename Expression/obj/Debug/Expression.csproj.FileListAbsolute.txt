@@ -1,0 +1,8 @@
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csprojAssemblyReference.cache
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CopyComplete
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.pdb
