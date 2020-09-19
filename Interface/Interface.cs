@@ -89,14 +89,59 @@ namespace Interface
                 {
                     static public void FAQ()
                     {
-                        Console.WriteLine("FAQ's being developed.\n");
+                        int space = 15;
+                        Console.WriteLine("\n########   Expressions   ########\n");
+
+                        Console.WriteLine("".PadLeft(space) + "----  Binary operators ----\n");
+                        Console.WriteLine("'+': ".PadLeft(space) + "The addition operator + computes the sum of its operands");
+                        Console.WriteLine("'-': ".PadLeft(space) + "The subtraction operator - subtracts its right-hand operand from its left-hand operand");
+                        Console.WriteLine("'*': ".PadLeft(space) + "The multiplication operator * computes the product of its operands");
+                        Console.WriteLine("'/': ".PadLeft(space) + "The division operator / divides its left-hand operand by its right-hand operand");
+                        Console.WriteLine("'%': ".PadLeft(space) + "The remainder operator % computes the remainder after dividing its left-hand operand by its right-hand operand");
+                        Console.WriteLine("'^': ".PadLeft(space) + "Raises a specified number to the specified power");
+                        Console.WriteLine();
+
+                        Console.WriteLine("".PadLeft(space) + "----  Unary operators and functions  ----\n");
+                        Console.WriteLine("'-': ".PadLeft(space) + "Negates x");
+                        Console.WriteLine("'sqrt()': ".PadLeft(space) + "Returns square root from x");
+                        Console.WriteLine("'sqr()': ".PadLeft(space) + "Returns x^2 value");
+                        Console.WriteLine("'sin()': ".PadLeft(space) + "Returns the sine of the specified angle");
+                        Console.WriteLine("'cos()': ".PadLeft(space) + "Returns the cosine of the specified angle");
+                        Console.WriteLine("'tan()': ".PadLeft(space) + "Returns the tangent of the specified angle");
+                        Console.WriteLine("'ctg()': ".PadLeft(space) + "Returns the cotangent of the specified angle");
+                        Console.WriteLine("'exp()': ".PadLeft(space) + "Returns e^x value");
+                        Console.WriteLine("'ln()': ".PadLeft(space) + "Returns the natural logarithm of a specified number");
+                        Console.WriteLine("'lg()': ".PadLeft(space) + "Returns base 10 logarithm of a specified number");
+                        Console.WriteLine("'log()': ".PadLeft(space) + "Returns base 2 logarithm of a specified number");
+                        Console.WriteLine("'pow2()': ".PadLeft(space) + "Returns 2^x value");
+                        Console.WriteLine("'pow10()': ".PadLeft(space) + "returns 10^x value");
+                        Console.WriteLine("'abs()': ".PadLeft(space) + "Returns the absolute value of a specified number");
+                        Console.WriteLine("'round()': ".PadLeft(space) + "Rounds a value to the nearest integer or to the specified number of fractional digits");
+                        Console.WriteLine();
+
+                        Console.WriteLine("".PadLeft(space) + "----  Constants and Variables  ----\n");
+                        Console.WriteLine("'Pi': ".PadLeft(space) + "Returns the pi constant");
+                        Console.WriteLine("'E': ".PadLeft(space) + "Returns the e constant");
+                        Console.WriteLine("'Ans': ".PadLeft(space) + "Returns the answer of the last expression");
+                        Console.WriteLine();
+
+                        Console.WriteLine("".PadLeft(space) + "Try 'calc -t' command to implement a few test expressions\n");
+
+                        Console.WriteLine("\n########   Expressions   ########\n");
+
+                        Console.WriteLine("\n########   How to use   ########\n");
+
+                        Console.WriteLine("".PadLeft(space) + "'calc <expression>': " + "Evaluates your expression and shows its result value");
+                        Console.WriteLine("".PadLeft(space) + "'calc %deg% <true/false>': " + "Calculator will use degrees if deg variable is stated to True and radians otherwise. It's false by default.");
+
+                        Console.WriteLine("\n########   How to use   ########\n");
                     }
                 }
             }
             static public void Ref()
             {
                 Console.WriteLine("Use 'help' to see all the available commands in current shell!");
-                Console.WriteLine("Use '-?' argument with any command to see an additional information!\n");
+                Console.WriteLine("Use 'help <utility>' to see an additional information!\n");
                 return;
             }
             static private void GetParams()
@@ -229,6 +274,15 @@ namespace Interface
                                                     Console.WriteLine("[Calc] Actual RPN expressions will be hidden in samples implementation.\n");
                                                 break;
                                             }
+                                        case "%deg%":
+                                            {
+                                                Expression.Expression.Deg = Boolean.Parse(param[1]);
+                                                if (Expression.Expression.Deg)
+                                                    Console.WriteLine("[Calc] Measure unit has been set to Degrees.\n");
+                                                else
+                                                    Console.WriteLine("[Calc] Measure unit has been set to Radians.\n");
+                                                break;
+                                            }
                                     }
                                 }
                                 break;
@@ -237,7 +291,6 @@ namespace Interface
                             {
                                 switch (param[0])
                                 {
-                                    case "-?": Shell.UnitReferences.Calc.FAQ(); return;
                                     case "-t": Expression.Expression.Samples.ImplementSamples(); return;
                                     case "%":
                                         {
@@ -260,6 +313,14 @@ namespace Interface
                                     case "%" + nameof(Expression.Expression.Samples.actrpn) + "%":
                                         {
                                             Console.WriteLine($"[Calc] Actual RPN expressions display: {Expression.Expression.Samples.actrpn}\n");
+                                            return;
+                                        }
+                                    case "%deg%":
+                                        {
+                                            if (Expression.Expression.Deg)
+                                                Console.WriteLine($"[Calc] Calculator is using Degrees!\n");
+                                            else
+                                                Console.WriteLine($"[Calc] Calculator is using Radians!\n");
                                             return;
                                         }
                                 }
@@ -287,6 +348,18 @@ namespace Interface
                         }
                     case "help":
                         {
+                            if (param_count == 1)
+                            {
+                                switch(param[0])
+                                {
+                                    case "calc":
+                                        {
+                                            Shell.UnitReferences.Calc.FAQ();
+                                            return;
+                                        }
+                                }
+                            }
+
                             Interface.Shell.faq();
                             return;
                         }
