@@ -15,6 +15,8 @@ namespace Calc
             Console.Title = "Calc";
 
             Shell.Ref();
+            Shell.ExecuteString(args);
+
             while (true)
             {
                 Shell.Enter();

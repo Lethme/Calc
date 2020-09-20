@@ -169,6 +169,7 @@ namespace Interface
             {
                 if (Command != String.Empty)
                 {
+                    Console.WriteLine($"Executing command: {Command}");
                     SetCommand(Command);
                     Execute();
                 }
@@ -177,11 +178,7 @@ namespace Interface
             {
                 foreach (var Command in CommandArr)
                 {
-                    if (Command != String.Empty)
-                    {
-                        SetCommand(Command);
-                        Execute();
-                    }
+                    ExecuteString(Command);
                 }
             }
             static public void Enter()
