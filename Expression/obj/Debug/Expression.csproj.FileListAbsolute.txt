@@ -15,3 +15,8 @@ E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CoreCom
 E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CopyComplete
 E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.dll
 E:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Expression\bin\Debug\bin\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Expression\obj\Debug\Expression.csproj.CoreCompileInputs.cache

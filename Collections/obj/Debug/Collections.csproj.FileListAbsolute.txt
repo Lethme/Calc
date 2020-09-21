@@ -9,3 +9,6 @@ E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csprojAssemb
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.dll
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\bin\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Collections\bin\Debug\bin\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache

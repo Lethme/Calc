@@ -25,3 +25,4 @@ E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.c
 E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CopyComplete
 E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.exe
 E:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.pdb
+X:\Projects\Visual Studio\C#\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache

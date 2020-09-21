@@ -244,7 +244,7 @@ namespace Expression
                             {
                                 j--;
                             }
-                            if (Expression[j] == (char)Enums.BinaryOperators.LeftBracket || j == -1) OperatorStack.Push((char)Enums.UnaryOperators.Minus);
+                            if (Expression[j] == (char)Enums.BinaryOperators.LeftBracket || !Char.IsDigit(Expression[j]) || j == -1) OperatorStack.Push((char)Enums.UnaryOperators.Minus);
                             else OperatorStack.Push((char)Enums.BinaryOperators.Minus);
                         }
                         else

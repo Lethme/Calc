@@ -19,3 +19,10 @@ E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CoreCompi
 E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CopyComplete
 E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.dll
 E:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Interface.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Interface.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Expression.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Collections.dll
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Expression.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\bin\Debug\bin\Collections.pdb
+X:\Projects\Visual Studio\C#\Calc\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
