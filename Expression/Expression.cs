@@ -244,7 +244,7 @@ namespace Expression
                             {
                                 j--;
                             }
-                            if (Expression[j] == (char)Enums.BinaryOperators.LeftBracket || j == 0) OperatorStack.Push((char)Enums.UnaryOperators.Minus);
+                            if (Expression[j] == (char)Enums.BinaryOperators.LeftBracket || j == -1) OperatorStack.Push((char)Enums.UnaryOperators.Minus);
                             else OperatorStack.Push((char)Enums.BinaryOperators.Minus);
                         }
                         else
@@ -343,6 +343,7 @@ namespace Expression
                 }
             }
             if (Double.IsNaN(Numbers.Peek()) || Double.IsInfinity(Numbers.Peek())) throw new ArgumentOutOfRangeException("Expression result is NaN!");
+            if (Numbers.Count != 1) throw new ArgumentOutOfRangeException();
             return Numbers.Pop();
         }
         static public double Parse(string Expression)
