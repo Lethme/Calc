@@ -234,7 +234,7 @@ namespace Interface
                                 {
                                     try
                                     {
-                                        double result = Expression.Expression.EvaluateRPN(param[1]);
+                                        double result = Expression.Expression.EvaluateRPNExpression(param[1]);
                                         Console.WriteLine($"[Calc] RPN Expression result: {result}\n");
                                     }
                                     catch (Exception)
@@ -273,8 +273,7 @@ namespace Interface
                                             }
                                         case "%deg%":
                                             {
-                                                Expression.Expression.Deg = Boolean.Parse(param[1]);
-                                                if (Expression.Expression.Deg)
+                                                if (Expression.Expression.SwitchRadDeg())
                                                     Console.WriteLine("[Calc] Measure unit has been set to Degrees.\n");
                                                 else
                                                     Console.WriteLine("[Calc] Measure unit has been set to Radians.\n");
